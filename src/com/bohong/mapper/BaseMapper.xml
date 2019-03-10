@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bohong.mapper.BaseMapper"><!-- 映射接口类的 路径！！！ -->
+
+    <insert id="addMessage" parameterType="com.bohong.domain.Base">
+
+        insert into work_message (sender,message_time,received_by,message,is_online)
+        values ( #{sender},#{message_time},#{receivedBy},#{message},#{isOnLine})
+
+    </insert>
+</mapper>

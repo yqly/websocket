@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <environments default="campus"><!-- 环境池 配置 ：default 属性值 默认环境名称 -->
+        <environment id="campus">
+            <transactionManager type="JDBC" />
+            <!-- 配置数据库连接信息 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+                <property name="url" value="jdbc:oracle:thin:@219.149.214.166:11521:campus" />
+                <property name="username" value="lvyuan" />
+                <property name="password" value="lvyuan" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper class="com.bohong.mapper.BaseMapper"/>
+    </mappers>
+</configuration>
